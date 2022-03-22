@@ -1,0 +1,75 @@
+/*VARIABLES*/
+$background-color : #273043;
+$accent-1 : #99002C;
+$card-1: #EDF0DA;
+$card-2: #115A56;
+$font-on-color: #FDFFFC;
+
+
+/*attribute
+Photo by <a href="https://unsplash.com/@carltraw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Carl Raw</a> on <a href="https://unsplash.com/s/photos/casino?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  */
+
+  /*General rules applied to the body*/
+body {
+    background-color: $background-color;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    a {
+        text-decoration: none;
+    }
+}
+
+/*Backgroun image for the webpage*/
+.intro{
+    background-image: url("hero.jpg");
+    background-size: 100%;
+    position: relative;
+}
+
+
+/*Header rules h1 and h2*/
+header {
+    padding: 1rem;
+    text-align: center;
+    color: $font-on-color;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    h1, h2{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 1rem;
+    }
+
+}
+
+/*The little explanation on the header*/
+.summary {
+    text-align: center;
+    color: $font-on-color;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    font-size: 25px;
+    text-shadow: 2px 2px 4px $background-color;
+    abbr::after {
+        content: "\a";
+    white-space: pre;
+    }
+    a {
+        color: $card-1;
+        &:hover {
+            color: $card-2;
+            background-color: $font-on-color;
+        }
+    }
+}
+
+
+/*First card. Had to give it a position absolute so it's not with the summary class since it is a child of intro*/
+.preamble {
+    position: absolute;
+    background-color: $card-1;
+    margin: 1rem;
+    max-width: 600px;
+    padding: 10px;
+}
