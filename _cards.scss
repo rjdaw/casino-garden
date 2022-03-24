@@ -1,0 +1,80 @@
+@use "variables" as *;
+@use "_mixins" as *;
+
+.preamble {
+  position: absolute;
+  top: 50em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20em;
+}
+
+.preamble,
+.main > div {
+  max-width: 600px;
+  padding: 0.5em 2em;
+  overflow: hidden;
+}
+
+.preamble,
+.main > div:nth-child(even) {
+  background-color: $accent2;
+  color: $text-dark;
+}
+
+.main > div:nth-child(odd) {
+  background-color: $primary;
+  color: $accent2;
+}
+
+.main {
+  display: grid;
+  grid-template-rows: 650px 750px 850px 400px 1150px;
+}
+
+.main > div {
+  margin: 1em 2em;
+}
+
+.main > div:nth-of-type(1) {
+  grid-row: 2/3;
+}
+
+.main > div:nth-of-type(2) {
+  grid-row: 3/4;
+}
+
+.main > div:nth-of-type(3) {
+  grid-row: 4/5;
+}
+
+.main > div:nth-of-type(4) {
+  grid-row: 5/6;
+}
+
+#zen-requirements {
+  background-color: $accent3;
+  color: $text-light;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* LINKS */
+.main > div a {
+  color: $accent1;
+}
+
+.main > div a:hover {
+  color: $accent3;
+}
+
+#zen-requirements a:hover {
+  color: $accent2;
+}
+
+/* HEADINGS */
+h3 {
+  @include uppercase;
+  padding-bottom: 1em;
+  border-bottom: 2px solid $accent1;
+}

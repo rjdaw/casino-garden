@@ -1,4 +1,3 @@
-/*VARIABLES*/
 /*attribute
 Photo by <a href="https://unsplash.com/@carltraw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Carl Raw</a> on <a href="https://unsplash.com/s/photos/casino?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   */
@@ -48,20 +47,91 @@ header h2 {
   white-space: pre;
 }
 .summary a {
-  color: #edf0da;
+  color: #fdfffc;
 }
 .summary a:hover {
-  color: #115a56;
+  color: #273043;
   background-color: #fdfffc;
 }
 
-/*First card. Had to give it a position absolute so it's not with the summary class since it is a child of intro*/
 .preamble {
   position: absolute;
-  background-color: #edf0da;
-  margin: 1rem;
+  top: 50em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20em;
+}
+
+.preamble,
+.main > div {
   max-width: 600px;
-  padding: 10px;
+  padding: 0.5em 2em;
+  overflow: hidden;
+}
+
+.preamble,
+.main > div:nth-child(even) {
+  background-color: #edf0da;
+  color: #273043;
+}
+
+.main > div:nth-child(odd) {
+  background-color: #115a56;
+  color: #edf0da;
+}
+
+.main {
+  display: grid;
+  grid-template-rows: 650px 750px 850px 400px 1150px;
+}
+
+.main > div {
+  margin: 1em 2em;
+}
+
+.main > div:nth-of-type(1) {
+  grid-row: 2/3;
+}
+
+.main > div:nth-of-type(2) {
+  grid-row: 3/4;
+}
+
+.main > div:nth-of-type(3) {
+  grid-row: 4/5;
+}
+
+.main > div:nth-of-type(4) {
+  grid-row: 5/6;
+}
+
+#zen-requirements {
+  background-color: #49213b;
+  color: #fdfffc;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* LINKS */
+.main > div a {
+  color: #99002c;
+}
+
+.main > div a:hover {
+  color: #49213b;
+}
+
+#zen-requirements a:hover {
+  color: #edf0da;
+}
+
+/* HEADINGS */
+h3 {
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding-bottom: 1em;
+  border-bottom: 2px solid #99002c;
 }
 
 * {

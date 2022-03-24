@@ -1,0 +1,7 @@
+@use "variables" as *;
+
+@mixin uppercase() {
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}

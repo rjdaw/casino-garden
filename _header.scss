@@ -1,9 +1,4 @@
-/*VARIABLES*/
-$background-color: #273043;
-$accent-1: #99002c;
-$card-1: #edf0da;
-$card-2: #115a56;
-$font-on-color: #fdfffc;
+@use "variables" as *;
 
 /*attribute
 Photo by <a href="https://unsplash.com/@carltraw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Carl Raw</a> on <a href="https://unsplash.com/s/photos/casino?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
@@ -31,7 +26,7 @@ body {
 header {
   padding: 1rem;
   text-align: center;
-  color: $font-on-color;
+  color: $text-light;
   padding-top: 5rem;
   padding-bottom: 5rem;
   h1,
@@ -44,7 +39,7 @@ header {
 /*The little explanation on the header*/
 .summary {
   text-align: center;
-  color: $font-on-color;
+  color: $text-light;
   padding-top: 5rem;
   padding-bottom: 5rem;
   font-size: 25px;
@@ -54,19 +49,10 @@ header {
     white-space: pre;
   }
   a {
-    color: $card-1;
+    color: $text-light;
     &:hover {
-      color: $card-2;
-      background-color: $font-on-color;
+      color: $text-dark;
+      background-color: $text-light;
     }
   }
-}
-
-/*First card. Had to give it a position absolute so it's not with the summary class since it is a child of intro*/
-.preamble {
-  position: absolute;
-  background-color: $card-1;
-  margin: 1rem;
-  max-width: 600px;
-  padding: 10px;
 }
