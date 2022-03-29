@@ -1,5 +1,7 @@
-@use "_header";
-@use "_cards";
+@import "header";
+@import "cards";
+@import "nav";
+@import "mixins";
 
 * {
   box-sizing: border-box;

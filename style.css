@@ -8,6 +8,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 17px;
 }
+
 body a {
   text-decoration: none;
 }
@@ -27,6 +28,7 @@ header {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
+
 header h1,
 header h2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -42,13 +44,16 @@ header h2 {
   font-size: 25px;
   text-shadow: 2px 2px 4px #273043;
 }
+
 .summary abbr::after {
   content: "\a";
   white-space: pre;
 }
+
 .summary a {
   color: #fdfffc;
 }
+
 .summary a:hover {
   color: #273043;
   background-color: #fdfffc;
@@ -58,7 +63,8 @@ header h2 {
   position: absolute;
   top: 50em;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 20em;
 }
 
@@ -81,8 +87,10 @@ header h2 {
 }
 
 .main {
+  display: -ms-grid;
   display: grid;
-  grid-template-rows: 650px 750px 850px 400px 1150px;
+  -ms-grid-rows: 650px 750px 850px 400px 1150px;
+      grid-template-rows: 650px 750px 850px 400px 1150px;
 }
 
 .main > div {
@@ -90,18 +98,26 @@ header h2 {
 }
 
 .main > div:nth-of-type(1) {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
   grid-row: 2/3;
 }
 
 .main > div:nth-of-type(2) {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
   grid-row: 3/4;
 }
 
 .main > div:nth-of-type(3) {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
   grid-row: 4/5;
 }
 
 .main > div:nth-of-type(4) {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
   grid-row: 5/6;
 }
 
@@ -134,8 +150,66 @@ h3 {
   border-bottom: 2px solid #99002c;
 }
 
-* {
-  box-sizing: border-box;
+.select,
+.archives,
+.resources {
+  font-family: "Alef", sans-serif;
+  font-size: 25px;
+  color: #fdfffc;
+  background-color: #99002c;
+  max-width: 90%;
+  padding: 15px 30px;
+  margin: 0 auto;
 }
 
+aside a, li {
+  color: #fdfffc;
+  list-style: none;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+.design-selection li {
+  color: black;
+}
+
+.design-name {
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  letter-spacing: -.3px;
+  font-size: 25px;
+}
+
+.design-archive > li, a {
+  font-size: 25px;
+}
+
+aside li a:nth-child(1)::after {
+  content: "\A";
+  white-space: pre;
+}
+
+aside li a:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  background-color: #fdfffc;
+  width: 50%;
+  height: 3px;
+  left: 50px;
+}
+
+.design-archive li + a::after {
+  content: "";
+  position: absolute;
+  background-color: #fdfffc;
+  width: 50%;
+  height: 3px;
+  left: 50px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 /*# sourceMappingURL=style.css.map */

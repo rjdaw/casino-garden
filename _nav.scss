@@ -1,0 +1,66 @@
+@import "variables";
+@import "mixins";
+
+.select,
+.archives,
+.resources {
+    font-family: $fonts-body;
+    font-size: 25px;
+    color: $text-light;
+    background-color: $accent1;
+    max-width: 90%;
+    padding: 15px 30px;
+    margin: 0 auto;
+    
+    // Trying to get rid of the : after the title
+
+    // // ::after {
+    // //     content: "";
+    // //     display: none;
+    // }
+}
+
+aside a, li {
+    color: $text-light;
+    list-style: none;
+    padding-top: 20px;
+    margin: 0 auto;
+    
+}
+
+.design-selection li {
+    color: black;
+    // font-family: $fonts-headline;
+}
+
+// uppercase transform
+
+.design-name {
+    @include uppercase;
+    letter-spacing: -.3px;
+    font-size: 25px;
+}
+
+.design-archive > li, a {
+    font-size: 25px;
+}
+
+// Adding a line break
+
+aside li a:nth-child(1) {
+
+    &::after {
+        content: "\A";
+        white-space: pre;
+      }
+}
+
+// Making the white line under the links
+
+aside li a:nth-child(2) {
+  @include white-line;
+}
+
+.design-archive li + a {
+  @include white-line;
+}

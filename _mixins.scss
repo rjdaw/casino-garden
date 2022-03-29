@@ -1,7 +1,19 @@
-@use "variables" as *;
+@import "variables";
 
 @mixin uppercase() {
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+@mixin white-line {
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $text-light;
+    width: 50%;
+    height: 3px;
+    // top: -10px;
+    left: 50px;
+}
 }
