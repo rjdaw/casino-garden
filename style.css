@@ -1,7 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Meie+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alef:wght@700&display=swap");
 /*attribute
 Photo by <a href="https://unsplash.com/@carltraw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Carl Raw</a> on <a href="https://unsplash.com/s/photos/casino?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   */
 /*General rules applied to the body*/
+@import url("https://fonts.googleapis.com/css2?family=Meie+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alef:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Meie+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alef:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Meie+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alef:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Meie+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alef:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Meie+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alef:wght@700&display=swap");
 body {
   background-color: #273043;
   margin: 0;
@@ -154,23 +166,63 @@ h3 {
 .archives,
 .resources {
   font-family: "Alef", sans-serif;
-  font-size: 25px;
   color: #fdfffc;
   background-color: #99002c;
-  max-width: 90%;
-  padding: 15px 30px;
-  margin: 0 auto;
+  max-width: 340px;
+  padding: 15px 20px;
+  margin: auto;
+  font-size: 0;
 }
 
-aside a, li {
+.select::after {
+  content: "Select a Design";
+  font-size: 24px;
+}
+
+.archives::after {
+  content: "Archives";
+  font-size: 24px;
+}
+
+.resources::after {
+  content: "Resources";
+  font-size: 24px;
+}
+
+aside li, aside a {
   color: #fdfffc;
   list-style: none;
   padding-top: 20px;
-  margin: 0 auto;
+  font-size: 20px;
+  max-width: 350px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.design-archive a {
+  margin-left: 50px;
+}
+
+.indicator {
+  display: none;
+}
+
+abbr {
+  text-decoration: none;
 }
 
 .design-selection li {
-  color: black;
+  font-family: "Meie Script", cursive;
+  letter-spacing: -5px;
+}
+
+.design-selection a {
+  font-family: "Alef", sans-serif;
+}
+
+.design-selection a:nth-child(2) {
+  margin-left: 20px;
 }
 
 .design-name {
@@ -178,11 +230,7 @@ aside a, li {
   letter-spacing: 2px;
   text-transform: uppercase;
   letter-spacing: -.3px;
-  font-size: 25px;
-}
-
-.design-archive > li, a {
-  font-size: 25px;
+  font-size: 24px;
 }
 
 aside li a:nth-child(1)::after {
@@ -190,22 +238,32 @@ aside li a:nth-child(1)::after {
   white-space: pre;
 }
 
-aside li a:nth-child(2)::after {
-  content: "";
-  position: absolute;
-  background-color: #fdfffc;
-  width: 50%;
-  height: 3px;
-  left: 50px;
+.design-selection,
+.design-archive,
+.zen-resources {
+  padding: 15px;
+  font-family: "Alef", sans-serif;
+  line-height: 2;
+  margin-left: -15px;
 }
 
-.design-archive li + a::after {
-  content: "";
-  position: absolute;
-  background-color: #fdfffc;
-  width: 50%;
-  height: 3px;
-  left: 50px;
+.design-selection li,
+.design-archives li,
+.zen-resources li {
+  border-bottom: 3px solid white;
+  padding: 15px;
+  line-height: 2;
+  margin-left: -15px;
+}
+
+.design-archives li:last-child,
+.zen-resources li:last-child,
+.design-selection li:last-child {
+  border-bottom: none;
+}
+
+.design-archives li {
+  font-family: "Alef", sans-serif;
 }
 
 * {
