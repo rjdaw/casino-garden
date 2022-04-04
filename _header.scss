@@ -1,5 +1,6 @@
 @import "variables";
 
+
 /*attribute
 Photo by <a href="https://unsplash.com/@carltraw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Carl Raw</a> on <a href="https://unsplash.com/s/photos/casino?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   */
@@ -9,11 +10,13 @@ body {
   background-color: $background-color;
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 17px;
+  font-size: 18px;
   a {
     text-decoration: none;
   }
 }
+
+
 
 /*Background image for the webpage*/
 .intro {
@@ -26,13 +29,77 @@ body {
 header {
   padding: 1rem;
   text-align: center;
-  color: $text-light;
   padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 1rem;
   h1,
   h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 1rem;
+    padding: .5rem;
+  }
+}
+
+/*Neon Design*/
+header {
+  font-size:35px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-shadow: 
+     1px 5px 4px rgba(0,0,0,.3), 
+    0 0 2px rgba(255,255,255,1), 
+    0 0 10px rgba(255,255,255,1), 
+    0 0 20px rgba(255,255,255,1), 
+    0 0 40px #99002c,
+    0 0 70px #99002c,
+    0 0 80px #99002c,
+    0 0 100px #99002c;
+    abbr {
+      animation-duration:6s;
+      animation-delay: 2s;
+      animation-direction: alternate;
+      animation: blink .5s infinite alternate;
+    }
+}
+
+
+@keyframes blink {
+  0%   {}
+  50%  {}
+  60%{
+    text-shadow: 
+      0 0 2px rgba(255, 255, 255, .1), 
+      0 0 10px rgba(255, 255, 255, .4);
+    
+    text-stroke: 2px rgba(255,255,255,0.05);
+  }
+  70%{
+    text-shadow: 
+      0 0 2px rgba(255,255,255,1), 
+      0 0 10px rgba(255,255,255,1), 
+      0 0 20px rgba(255,255,255,1), 
+      0 0 30px rgba(255,255,255,1), 
+      0 0 40px #49213b,
+      0 0 70px #49213b, 
+      0 0 80px #49213b,
+      0 0 100px #49213b,
+  }
+  80%{
+    text-shadow: 
+      0 0 2px rgba(255, 255, 255, .1), 
+      0 0 10px rgba(255, 255, 255, .4);
+    
+    text-stroke: 2px rgba(255,255,255,0.05);
+  }
+  100% { 
+    text-shadow: 
+      0 0 2px rgba(255,255,255,1), 
+      0 0 10px rgba(255,255,255,1), 
+      0 0 20px rgba(255,255,255,1), 
+      0 0 30px rgba(255,255,255,1), 
+      0 0 40px #49213b,
+      0 0 70px #49213b,
+      0 0 80px #49213b,
+      0 0 100px #49213b,
   }
 }
 
@@ -52,7 +119,7 @@ header {
     color: $text-light;
     &:hover {
       color: $text-dark;
-      background-color: $text-light;
+      animation: blink .7s infinite alternate;
     }
   }
 }

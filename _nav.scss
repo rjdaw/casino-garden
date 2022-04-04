@@ -5,48 +5,82 @@
 .archives,
 .resources {
     font-family: $fonts-body;
-    font-size: 25px;
     color: $text-light;
     background-color: $accent1;
-    max-width: 90%;
-    padding: 15px 30px;
-    margin: 0 auto;
-    
-    // Trying to get rid of the : after the title
-
-    // // ::after {
-    // //     content: "";
-    // //     display: none;
-    // }
+    max-width: 340px;
+    padding: 15px 20px;
+    margin: auto;
+    font-size: 0; //hide text to add ::after content and remove ":"
 }
 
-aside a, li {
+// Re-adding content without ":"
+.select {
+    &::after {
+        content: "Select a Design";
+        font-size: 24px;
+    }
+}
+
+.archives {
+    &::after {
+        content: "Archives";
+        font-size: 24px;
+    }
+}
+
+.resources {
+    &::after {
+        content: "Resources";
+        font-size: 24px;
+    }
+}
+
+aside li, aside a {
     color: $text-light;
     list-style: none;
     padding-top: 20px;
-    margin: 0 auto;
-    
+    font-size: 20px;
+    max-width: 350px;
+    @include uppercase;    
 }
 
+.design-archive a {
+    margin-left: 50px;
+}
+
+// hide underlines and and carrot
+.indicator {
+    display: none;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+// set initial font to cursive
 .design-selection li {
-    color: black;
-    // font-family: $fonts-headline;
+    font-family: $fonts-headline;
+    letter-spacing: -5px;
+}
+
+// change is back so just the word "by" is targeted
+.design-selection a {
+    font-family: $fonts-body;
+}
+
+// fix spacing between words
+.design-selection a:nth-child(2) {
+    margin-left: 20px;
 }
 
 // uppercase transform
-
 .design-name {
     @include uppercase;
     letter-spacing: -.3px;
-    font-size: 25px;
-}
-
-.design-archive > li, a {
-    font-size: 25px;
+    font-size: 24px;
 }
 
 // Adding a line break
-
 aside li a:nth-child(1) {
 
     &::after {
@@ -55,12 +89,48 @@ aside li a:nth-child(1) {
       }
 }
 
-// Making the white line under the links
-
-aside li a:nth-child(2) {
-  @include white-line;
+// Add white line under each link
+.design-selection,
+.design-archive,
+.zen-resources 
+ {
+    // border-bottom: 3px solid white;
+    padding: 15px;
+    font-family: $fonts-body;
+    line-height: 2;
+    margin-left: -15px;
 }
 
-.design-archive li + a {
-  @include white-line;
+.design-selection li,
+.design-archives li,
+.zen-resources li
+ {
+    border-bottom: 3px solid white;
+    padding: 15px;
+    // font-family: $fonts-body;
+    line-height: 2;
+    margin-left: -15px;
 }
+
+.design-archives li:last-child,
+.zen-resources li:last-child,
+.design-selection li:last-child
+ {
+    border-bottom: none;
+}
+
+.design-archives li {
+    font-family: $fonts-body;
+}
+
+// media query for large screen 
+@media screen and (min-width: 770px) {
+    
+    // aside li, 
+    // aside a {
+    //     margin: auto;
+    // }
+}
+
+
+

@@ -1,12 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Meie+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alef:wght@700&display=swap");
 /*attribute
 Photo by <a href="https://unsplash.com/@carltraw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Carl Raw</a> on <a href="https://unsplash.com/s/photos/casino?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   */
 /*General rules applied to the body*/
+@import url("https://fonts.googleapis.com/css2?family=Meie+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alef:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Meie+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alef:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Meie+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alef:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Meie+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alef:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Meie+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alef:wght@700&display=swap");
 body {
   background-color: #273043;
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 17px;
+  font-size: 18px;
 }
 body a {
   text-decoration: none;
@@ -23,14 +35,85 @@ body a {
 header {
   padding: 1rem;
   text-align: center;
-  color: #fdfffc;
   padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 1rem;
 }
 header h1,
 header h2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  padding: 1rem;
+  padding: 0.5rem;
+}
+
+/*Neon Design*/
+header {
+  font-size: 35px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 5px 4px rgba(0, 0, 0, 0.3), 0 0 2px white, 0 0 10px white,
+    0 0 20px white, 0 0 40px #99002c, 0 0 70px #99002c, 0 0 80px #99002c,
+    0 0 100px #99002c;
+}
+
+header abbr {
+  -webkit-animation-duration: 6s;
+  animation-duration: 6s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation: blink 0.5s infinite alternate;
+  animation: blink 0.5s infinite alternate;
+}
+
+@-webkit-keyframes blink {
+  0% {
+  }
+  50% {
+  }
+  60% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.1),
+      0 0 10px rgba(255, 255, 255, 0.4);
+    text-stroke: 2px rgba(255, 255, 255, 0.05);
+  }
+  70% {
+    text-shadow: 0 0 2px white, 0 0 10px white, 0 0 20px white, 0 0 30px white,
+      0 0 40px #49213b, 0 0 70px #49213b, 0 0 80px #49213b, 0 0 100px #49213b;
+  }
+  80% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.1),
+      0 0 10px rgba(255, 255, 255, 0.4);
+    text-stroke: 2px rgba(255, 255, 255, 0.05);
+  }
+  100% {
+    text-shadow: 0 0 2px white, 0 0 10px white, 0 0 20px white, 0 0 30px white,
+      0 0 40px #49213b, 0 0 70px #49213b, 0 0 80px #49213b, 0 0 100px #49213b;
+  }
+}
+
+@keyframes blink {
+  0% {
+  }
+  50% {
+  }
+  60% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.1),
+      0 0 10px rgba(255, 255, 255, 0.4);
+    text-stroke: 2px rgba(255, 255, 255, 0.05);
+  }
+  70% {
+    text-shadow: 0 0 2px white, 0 0 10px white, 0 0 20px white, 0 0 30px white,
+      0 0 40px #49213b, 0 0 70px #49213b, 0 0 80px #49213b, 0 0 100px #49213b;
+  }
+  80% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.1),
+      0 0 10px rgba(255, 255, 255, 0.4);
+    text-stroke: 2px rgba(255, 255, 255, 0.05);
+  }
+  100% {
+    text-shadow: 0 0 2px white, 0 0 10px white, 0 0 20px white, 0 0 30px white,
+      0 0 40px #49213b, 0 0 70px #49213b, 0 0 80px #49213b, 0 0 100px #49213b;
+  }
 }
 
 /*The little explanation on the header*/
@@ -51,7 +134,8 @@ header h2 {
 }
 .summary a:hover {
   color: #273043;
-  background-color: #fdfffc;
+  -webkit-animation: blink 0.7s infinite alternate;
+  animation: blink 0.7s infinite alternate;
 }
 
 .preamble {
@@ -138,23 +222,64 @@ h3 {
 .archives,
 .resources {
   font-family: "Alef", sans-serif;
-  font-size: 25px;
   color: #fdfffc;
   background-color: #99002c;
-  max-width: 90%;
-  padding: 15px 30px;
-  margin: 0 auto;
+  max-width: 340px;
+  padding: 15px 20px;
+  margin: auto;
+  font-size: 0;
 }
 
-aside a, li {
+.select::after {
+  content: "Select a Design";
+  font-size: 24px;
+}
+
+.archives::after {
+  content: "Archives";
+  font-size: 24px;
+}
+
+.resources::after {
+  content: "Resources";
+  font-size: 24px;
+}
+
+aside li,
+aside a {
   color: #fdfffc;
   list-style: none;
   padding-top: 20px;
-  margin: 0 auto;
+  font-size: 20px;
+  max-width: 350px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.design-archive a {
+  margin-left: 50px;
+}
+
+.indicator {
+  display: none;
+}
+
+abbr {
+  text-decoration: none;
 }
 
 .design-selection li {
-  color: black;
+  font-family: "Meie Script", cursive;
+  letter-spacing: -5px;
+}
+
+.design-selection a {
+  font-family: "Alef", sans-serif;
+}
+
+.design-selection a:nth-child(2) {
+  margin-left: 20px;
 }
 
 .design-name {
@@ -162,11 +287,7 @@ aside a, li {
   letter-spacing: 2px;
   text-transform: uppercase;
   letter-spacing: -0.3px;
-  font-size: 25px;
-}
-
-.design-archive > li, a {
-  font-size: 25px;
+  font-size: 24px;
 }
 
 aside li a:nth-child(1)::after {
@@ -174,22 +295,32 @@ aside li a:nth-child(1)::after {
   white-space: pre;
 }
 
-aside li a:nth-child(2)::after {
-  content: "";
-  position: absolute;
-  background-color: #fdfffc;
-  width: 50%;
-  height: 3px;
-  left: 50px;
+.design-selection,
+.design-archive,
+.zen-resources {
+  padding: 15px;
+  font-family: "Alef", sans-serif;
+  line-height: 2;
+  margin-left: -15px;
 }
 
-.design-archive li + a::after {
-  content: "";
-  position: absolute;
-  background-color: #fdfffc;
-  width: 50%;
-  height: 3px;
-  left: 50px;
+.design-selection li,
+.design-archives li,
+.zen-resources li {
+  border-bottom: 3px solid white;
+  padding: 15px;
+  line-height: 2;
+  margin-left: -15px;
+}
+
+.design-archives li:last-child,
+.zen-resources li:last-child,
+.design-selection li:last-child {
+  border-bottom: none;
+}
+
+.design-archives li {
+  font-family: "Alef", sans-serif;
 }
 
 .zen-resources > ul > li:last-child {
