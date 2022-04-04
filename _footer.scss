@@ -1,0 +1,33 @@
+@import "variables";
+
+.zen-resources > ul > li:last-child {
+  margin-bottom: 6em;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  font-family: $fonts-body;
+  font-weight: bold;
+  background-color: $primary;
+  text-align: center;
+  width: 100%;
+  z-index: 999;
+}
+
+footer > a {
+  color: $accent2;
+  padding: 20px;
+  font-size: 16px;
+  width: 70px;
+  height: 70px;
+  transition: transform 1.5s ease-in-out;
+  display: inline-block;
+  &:hover {
+    color: $text-dark;
+    background-image: url("https://www.svgrepo.com/show/121692/poker-chip.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: rotateY(360deg);
+  }
+}

@@ -8,7 +8,6 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 17px;
 }
-
 body a {
   text-decoration: none;
 }
@@ -28,7 +27,6 @@ header {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
-
 header h1,
 header h2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -44,16 +42,13 @@ header h2 {
   font-size: 25px;
   text-shadow: 2px 2px 4px #273043;
 }
-
 .summary abbr::after {
   content: "\a";
   white-space: pre;
 }
-
 .summary a {
   color: #fdfffc;
 }
-
 .summary a:hover {
   color: #273043;
   background-color: #fdfffc;
@@ -63,8 +58,7 @@ header h2 {
   position: absolute;
   top: 50em;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   width: 20em;
 }
 
@@ -87,10 +81,8 @@ header h2 {
 }
 
 .main {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 650px 750px 850px 400px 1150px;
-      grid-template-rows: 650px 750px 850px 400px 1150px;
+  grid-template-rows: 650px 750px 850px 400px 1150px;
 }
 
 .main > div {
@@ -98,26 +90,18 @@ header h2 {
 }
 
 .main > div:nth-of-type(1) {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
   grid-row: 2/3;
 }
 
 .main > div:nth-of-type(2) {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
   grid-row: 3/4;
 }
 
 .main > div:nth-of-type(3) {
-  -ms-grid-row: 4;
-  -ms-grid-row-span: 1;
   grid-row: 4/5;
 }
 
 .main > div:nth-of-type(4) {
-  -ms-grid-row: 5;
-  -ms-grid-row-span: 1;
   grid-row: 5/6;
 }
 
@@ -177,7 +161,7 @@ aside a, li {
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
-  letter-spacing: -.3px;
+  letter-spacing: -0.3px;
   font-size: 25px;
 }
 
@@ -186,7 +170,7 @@ aside a, li {
 }
 
 aside li a:nth-child(1)::after {
-  content: "\A";
+  content: "\a";
   white-space: pre;
 }
 
@@ -208,8 +192,40 @@ aside li a:nth-child(2)::after {
   left: 50px;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.zen-resources > ul > li:last-child {
+  margin-bottom: 6em;
 }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  font-family: "Alef", sans-serif;
+  font-weight: bold;
+  background-color: #115a56;
+  text-align: center;
+  width: 100%;
+  z-index: 999;
+}
+
+footer > a {
+  color: #edf0da;
+  padding: 20px;
+  font-size: 16px;
+  width: 70px;
+  height: 70px;
+  transition: transform 1.5s ease-in-out;
+  display: inline-block;
+}
+footer > a:hover {
+  color: #273043;
+  background-image: url("https://www.svgrepo.com/show/121692/poker-chip.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  transform: rotateY(360deg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
 /*# sourceMappingURL=style.css.map */
