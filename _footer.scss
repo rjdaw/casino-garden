@@ -1,7 +1,7 @@
 @import "variables";
 
 .zen-resources > ul > li:last-child {
-  margin-bottom: 6em;
+  margin-bottom: 3em;
 }
 
 footer {
@@ -18,7 +18,7 @@ footer {
 footer > a {
   color: $accent2;
   padding: 20px;
-  font-size: 16px;
+  font-size: 20px;
   width: 70px;
   height: 70px;
   transition: transform 1.5s ease-in-out;
