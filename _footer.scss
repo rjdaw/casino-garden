@@ -24,10 +24,6 @@ footer > a {
   transition: transform 1.5s ease-in-out;
   display: inline-block;
   &:hover {
-    color: $text-dark;
-    background-image: url("https://www.svgrepo.com/show/121692/poker-chip.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    transform: rotateY(360deg);
+    @include chip-rotation;
   }
 }
